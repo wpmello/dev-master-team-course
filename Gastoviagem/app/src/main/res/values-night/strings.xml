@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="total_km">Total de quilômetro</string>
+    <string name="price">Preço</string>
+    <string name="price_per_liter">Preço por litro</string>
+    <string name="total_expenditure">Seu gasto total será de:</string>
+    <string name="value">R$ 0</string>
+    <string name="calcule">CALCULAR</string>
+</resources>
