@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "motivation"
-include ':app'
+include ':MotivationApp'
