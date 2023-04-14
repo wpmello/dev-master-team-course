@@ -40,15 +40,16 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/text_user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/linear_menu"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/cabin"
-        android:text="Olá, kotlin"
         android:textColor="@color/black"
-        android:textSize="18dp" />
+        android:textSize="18sp"
+        tools:text="Olá, Usuário"/>
 
     <TextView
         android:id="@+id/text_phrase"
@@ -60,7 +61,7 @@
         android:padding="16dp"
         android:text="@string/app_name"
         android:textColor="@color/black"
-        android:textSize="22dp" />
+        android:textSize="22sp" />
 
     <View
         android:layout_width="128dp"

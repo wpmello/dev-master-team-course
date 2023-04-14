@@ -1,9 +1,10 @@
 package com.example.motivation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.example.motivation.databinding.ActivityMainBinding
+import com.example.motivation.model.SecurityPreferences
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -15,8 +16,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding.root)
 
         binding.buttonNewPhrase.setOnClickListener(this)
-
         supportActionBar?.hide()
+
+        binding.textUserName.text =
+            getString(R.string.user_name, SecurityPreferences(this).getString("USER_NAME"))
     }
 
     override fun onClick(view: View) {
