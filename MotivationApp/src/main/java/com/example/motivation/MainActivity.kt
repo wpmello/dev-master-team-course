@@ -5,11 +5,13 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.motivation.databinding.ActivityMainBinding
+import com.example.motivation.model.MotivationConstants
 import com.example.motivation.model.SecurityPreferences
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
+    private var category = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,12 +45,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when (id) {
             R.id.image_all -> {
                 binding.imageAll.setColorFilter(ContextCompat.getColor(this, R.color.white))
+                category = MotivationConstants.FILTER.ALL
             }
             R.id.image_happy -> {
                 binding.imageHappy.setColorFilter(ContextCompat.getColor(this, R.color.white))
+                category = MotivationConstants.FILTER.HAPPY
             }
             else -> {
                 binding.imageSunny.setColorFilter(ContextCompat.getColor(this, R.color.white))
+                category = MotivationConstants.FILTER.SUNNY
             }
         }
     }
