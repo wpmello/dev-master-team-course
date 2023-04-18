@@ -29,7 +29,7 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View) {
         if (view.id == R.id.saveButton) {
-            testSave()
+            handleSave()
         }
     }
 
@@ -41,7 +41,7 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    private fun testSave() {
+    private fun handleSave() {
         val name = binding.enterNameEdit.text.toString()
         if (name != "") {
             SecurityPreferences(this).storeString("USER_NAME", name)

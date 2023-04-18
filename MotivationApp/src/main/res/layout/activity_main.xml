@@ -18,25 +18,26 @@
         android:paddingBottom="16dp">
 
         <ImageView
+            android:id="@+id/image_all"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:src="@drawable/ic_all_inclusive"
             app:tint="@color/white" />
 
-
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:src="@drawable/ic_sunny" />
-
-        <ImageView
+            android:id="@+id/image_happy"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:src="@drawable/ic_happy" />
 
+        <ImageView
+            android:id="@+id/image_sunny"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_sunny" />
     </LinearLayout>
 
     <TextView
@@ -49,7 +50,7 @@
         android:fontFamily="@font/cabin"
         android:textColor="@color/black"
         android:textSize="18sp"
-        tools:text="Olá, Usuário"/>
+        tools:text="Olá, Usuário" />
 
     <TextView
         android:id="@+id/text_phrase"
