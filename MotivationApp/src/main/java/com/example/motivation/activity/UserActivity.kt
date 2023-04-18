@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.motivation.MainActivity
 import com.example.motivation.R
 import com.example.motivation.databinding.ActivityUserBinding
+import com.example.motivation.model.MotivationConstants
 import com.example.motivation.model.SecurityPreferences
 
 class UserActivity : AppCompatActivity(), View.OnClickListener {
@@ -22,11 +23,21 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
         supportActionBar?.hide()
 
         binding.saveButton.setOnClickListener(this)
+
+        verifyUserName()
     }
 
     override fun onClick(view: View) {
         if (view.id == R.id.saveButton) {
             testSave()
+        }
+    }
+
+    private fun verifyUserName() {
+        val name = SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME)
+        if (name != "") {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
     }
 
