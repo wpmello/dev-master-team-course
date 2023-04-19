@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.motivation.MainActivity
 import com.example.motivation.R
 import com.example.motivation.databinding.ActivityUserBinding
-import com.example.motivation.model.MotivationConstants
-import com.example.motivation.model.SecurityPreferences
+import com.example.motivation.model.infra.MotivationConstants
+import com.example.motivation.model.infra.SecurityPreferences
 
 class UserActivity : AppCompatActivity(), View.OnClickListener {
 

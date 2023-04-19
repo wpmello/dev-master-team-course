@@ -5,13 +5,14 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.motivation.databinding.ActivityMainBinding
-import com.example.motivation.model.MotivationConstants
-import com.example.motivation.model.SecurityPreferences
+import com.example.motivation.model.Mock
+import com.example.motivation.model.infra.MotivationConstants
+import com.example.motivation.model.infra.SecurityPreferences
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
-    private var category = 1
+    private var category = MotivationConstants.FILTER.ALL
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,10 +32,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View) {
         if (view.id == R.id.buttonNewPhrase) {
-            val s = ""
+            handlePhrase()
         } else if (view.id in listOf(R.id.image_all, R.id.image_happy, R.id.image_sunny)) {
             handleFilter(view.id)
         }
+    }
+
+    private fun handlePhrase() {
+        val mockPhrase = Mock().getPhrase(category)
+        binding.textPhrase.text = mockPhrase.description
     }
 
     private fun handleFilter(id: Int) {
