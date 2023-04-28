@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         supportActionBar?.hide()
 
         handleFilter(R.id.image_all)
+        handlePhrase()
 
         binding.buttonNewPhrase.setOnClickListener(this)
         binding.textUserName.text =
