@@ -43,6 +43,7 @@
         android:layout_marginTop="14dp"
         android:backgroundTint="#DADADA"
         android:text="@string/btn_login"
+        android:textSize="16sp"
         android:textColor="#08AD7F"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
